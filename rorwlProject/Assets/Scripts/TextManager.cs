@@ -14,12 +14,8 @@ public class TextManager : MonoBehaviour
     public bool isText;
     public bool isStart;
     public static bool isAction = false;  //Ai패널을 관리하는변수
+    public GameObject Wake;
 
-    private void Start()
-    {
-        int character = Random.Range(1, 3);
-
-    }
     private void Awake()
     {
         instance = this;
@@ -40,11 +36,8 @@ public class TextManager : MonoBehaviour
         {
             if (AiManager.instance.numberManager.turn == 0)
             {
-                if (Input.GetMouseButtonDown(0))
-                {
-                    AiManager.instance.numberManager.turn++;
-                    isText = false;
-                }
+                    //isText = false;
+                    Wake.SetActive(true);
             }
         }
 

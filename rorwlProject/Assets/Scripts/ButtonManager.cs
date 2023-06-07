@@ -9,16 +9,23 @@ public class ButtonManager : MonoBehaviour
     public GameObject UI;
     public GameObject NextUI;
     public bool ManagerOk = true;
-
+    public GameObject Wake;
     private void Update()
     {
-        
+
     }
 
     public void Decision()
     {
-        switch (AiManager.instance.numberManager.turn) 
+        switch (AiManager.instance.numberManager.turn)
         {
+            case 0:
+                if (Wake != null)
+                {
+                    AiManager.instance.numberManager.turn++;
+                    Wake.SetActive(false);
+                }
+                break;
             case 1:
                 //AiManager.instance.numberManager.choosePlaceNum = btNumber;
                 AiManager.instance.numberManager.chooseYesorNo = btNumber;

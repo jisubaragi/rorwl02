@@ -40,7 +40,7 @@ public class TypeEffect : MonoBehaviour
         {
             if (AiManager.instance.numberManager.turn == 0)
             {
-                Invoke("EffecStart", 2.5f);
+                Invoke("EffecStart", 1);
                 TextManager.instance.isText = false;
             }
             if (AiManager.instance.numberManager.turn == 2)
