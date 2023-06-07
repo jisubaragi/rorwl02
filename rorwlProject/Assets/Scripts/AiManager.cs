@@ -11,6 +11,7 @@ public class AiManager : MonoBehaviour
     public Transform tfFoodPrefab;
 
     public bool isFood;
+    public string foodName;
     public GameObject[] readyFoodPrefabs;
 
     private void Awake()
@@ -254,6 +255,8 @@ public class AiManager : MonoBehaviour
 
         GameObject makeTile = Instantiate(prefabManager.tile, makeFood.transform.position, Quaternion.identity);
         makeTile.transform.position = makeFood.transform.position;
+
+        foodName = readyFoodPrefabs[randomNumber01].name;
 
         isFood = true;
     }
