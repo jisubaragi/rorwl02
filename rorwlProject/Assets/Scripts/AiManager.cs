@@ -263,6 +263,7 @@ public class AiManager : MonoBehaviour
 public class NumberManager
 {
     public int turn;
+    public int chooseAiType;
     public int chooseYesorNo;
     public int choosePlaceNum;
     public int chooseWeatherNum;

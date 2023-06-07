@@ -10,16 +10,13 @@ public class TextManager : MonoBehaviour
     public GameObject NextUI;
     public TypeEffect ChatText;  //채팅이 나오는 텍스트
     public Animator AIanim;     //AI이미지 저장
+    public GameObject MAIimage;
+    public GameObject WAIimage;
     public Animator AIpanel;                 //AI이미지 올라갔다 내려오는 애니메이션
     public bool isText;
     public bool isStart;
     public static bool isAction = false;  //Ai패널을 관리하는변수
 
-    private void Start()
-    {
-        int character = Random.Range(1, 3);
-
-    }
     private void Awake()
     {
         instance = this;
@@ -38,13 +35,22 @@ public class TextManager : MonoBehaviour
 
         if (isStart)
         {
-            if (AiManager.instance.numberManager.turn == 0)
+            if (AiManager.instance.numberManager.turn == 0&& AiManager.instance.numberManager.chooseAiType != 0)
             {
                 if (Input.GetMouseButtonDown(0))
                 {
                     AiManager.instance.numberManager.turn++;
                     isText = false;
                 }
+            }
+            if(AiManager.instance.numberManager.turn == 0&& AiManager.instance.numberManager.chooseAiType ==1)
+            {
+                MAIimage.SetActive(true);
+            }
+            else if(AiManager.instance.numberManager.turn == 0 && AiManager.instance.numberManager.chooseAiType == 2)
+            {
+                WAIimage.SetActive(true);
+
             }
         }
 

@@ -9,6 +9,7 @@ public class ButtonManager : MonoBehaviour
     public GameObject UI;
     public GameObject NextUI;
     public bool ManagerOk = true;
+    public Animator ShowPanel;
 
     private void Update()
     {
@@ -19,6 +20,10 @@ public class ButtonManager : MonoBehaviour
     {
         switch (AiManager.instance.numberManager.turn) 
         {
+            case 0:
+                AiManager.instance.numberManager.chooseAiType = btNumber;
+                ShowPanel.SetInteger("ShowC", 100);
+                break;
             case 1:
                 //AiManager.instance.numberManager.choosePlaceNum = btNumber;
                 AiManager.instance.numberManager.chooseYesorNo = btNumber;
