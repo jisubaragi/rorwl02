@@ -257,7 +257,25 @@ public class TextManager : MonoBehaviour
                 }
                 break;
             case 7:
-                Chat00("짜잔");
+                string place=null;
+
+                switch (AiManager.instance.numberManager.choosePlaceNum)
+                {
+                    case 1:
+                        place = "공대 식당";
+                        break;
+                    case 2:
+                        place = "구바우어관 식당";
+                        break;
+                    case 3:
+                        place = "신바우어관 식당";
+                        break;
+                    case 4:
+                        place = "아람관 식당";
+                        break;
+                }
+
+                Chat00("짜잔"+place+AiManager.instance.foodName);
                 break;
         }
         isText = true;
