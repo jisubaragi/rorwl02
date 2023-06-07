@@ -270,6 +270,16 @@ public class TextManager : MonoBehaviour
 
                 Chat00("Â¥ÀÜ"+place+AiManager.instance.foodName);
                 break;
+            case 8:
+                if (AiManager.instance.numberManager.chooseLastYN == 1)
+                {
+                    Chat00("ÁÁ¾Æ!");
+                }
+                else if (AiManager.instance.numberManager.chooseLastYN == 2)
+                {
+                    Chat00("½È¾î¤Ð?");
+                }
+                break;
         }
         isText = true;
     }

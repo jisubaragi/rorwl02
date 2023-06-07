@@ -43,7 +43,7 @@ public class TypeEffect : MonoBehaviour
                 Invoke("EffecStart", 1);
                 TextManager.instance.isText = false;
             }
-            if (AiManager.instance.numberManager.turn == 2)
+            if (AiManager.instance.numberManager.turn == 2&&AiManager.instance.numberManager.chooseYesorNo!=2)
             {
                 text.AiHIde();
                 MouseControll.SetActive(true);

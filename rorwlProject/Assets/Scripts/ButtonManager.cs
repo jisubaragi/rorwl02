@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -47,6 +48,10 @@ public class ButtonManager : MonoBehaviour
                 AiManager.instance.numberManager.chooseBigKindNum = btNumber;
                 AiManager.instance.numberManager.turn++;
                 break;
+            case 7:
+                AiManager.instance.numberManager.chooseLastYN = btNumber;
+                AiManager.instance.numberManager.turn++;
+                break;
         }
 
         TextManager.instance.isText = false;
@@ -56,5 +61,10 @@ public class ButtonManager : MonoBehaviour
         {
             NextUI.SetActive(true);
         }
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(0);
     }
 }

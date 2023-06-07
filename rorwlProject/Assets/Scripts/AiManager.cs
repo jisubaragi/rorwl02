@@ -272,4 +272,5 @@ public class NumberManager
     public int chooseTempNum;
     public int chooseSmallKindNum;
     public int chooseBigKindNum;
+    public int chooseLastYN;
 }
