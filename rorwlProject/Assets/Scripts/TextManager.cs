@@ -15,7 +15,7 @@ public class TextManager : MonoBehaviour
     public bool isStart;
     public static bool isAction = false;  //Ai패널을 관리하는변수
     public GameObject Wake;
-
+    public GameObject AiFace;
     private void Awake()
     {
         instance = this;
@@ -97,18 +97,23 @@ public class TextManager : MonoBehaviour
                     switch (randomNumber2)
                     {
                         case 1:
+                            AiFace.SetActive(false);
                             Chat00("좋아, 지금 너가 있는곳은 어디야?");
                             break;
                         case 2:
+                            AiFace.SetActive(false);
                             Chat00("알겠어! 나만 믿어! 너가 현재 있는곳을 알려줘");
                             break;
                         case 3:
+                            AiFace.SetActive(false);
                             Chat00("에이 귀찮은데 좋아 너가 있는 위치는?");
                             break;
                         case 4:
+                            AiFace.SetActive(false);
                             Chat00("하암.... 너 위치나 찍어");
                             break;
                         case 5:
+                            AiFace.SetActive(false);
                             Chat00("내가 맛있는걸로 추천할테니 위치를 알려줘");
                             break;
                     }

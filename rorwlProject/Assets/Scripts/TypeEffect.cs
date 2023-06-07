@@ -10,7 +10,7 @@ public class TypeEffect : MonoBehaviour
     public TextManager text;
     public GameObject MouseControll;
     public Animator AIpanel;
-
+    public GameObject AiFace;
     string targetMsg;       //표시할 문자열을 저장하는 변수
     Text msgText;
     int index;
@@ -45,7 +45,6 @@ public class TypeEffect : MonoBehaviour
             }
             if (AiManager.instance.numberManager.turn == 2&&AiManager.instance.numberManager.chooseYesorNo!=2)
             {
-                text.AiHIde();
                 MouseControll.SetActive(true);
             }
             EffectEnd();
